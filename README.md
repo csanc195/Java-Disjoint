@@ -10,7 +10,7 @@ Here follows a brief summary of the method's implementation as well as some expl
 <h4>DISJOINT:</h4>
 This algorithm uses two iterators, a and b to traverse the two lists, a is the iterator for list1 
 and b is the iterator for list 2. The algorithm checks that there are no common elements between list1 and list2. Since both lists are ordered the algorithm first checks if the current element from list1 is greater than the current element on list2, if it is, it then advances the Iterator on the second list, as it is not clear at this point if the element 1 is present on list2; in that case the algorithm continues to traverse list2 by advancing its Iterator to the next element.
-In the other hand if the current element on list1 is smaller than the current element on list2, then the iterator of list1 is advanced since its obvious that element wont be found in list2 since both lists are ordered, as its understood and easy to prove that if: x<y, then x < y+1, x<y+2 etc. 
+In the other hand if the current element on list1 is smaller than the current element on list2, then the iterator of list1 is advanced since its obvious that element wont be found in list2 since both lists are ordered, as its understood and easy to prove that if: <br>x<y, then x < y+1, x<y+2 etc.<br> 
 The last possibility checked is to verify if the current element of list1 is equal to the current 
 element on list2, if they are equal the algorithm then returns false since they are not disjoint as they share at least that element. 
 This procedure continues until either the Iterator to list 1 or the Iterator to list 2 become null (in
@@ -21,9 +21,11 @@ simultaneously only once to solve the problem, in the worst case scenario, the a
 <br>
 <b>List1 = {15,17,19}</b><br>
 <b>List2 = {2,4,6,7,8,9,10,11,12,13,14,21}</b><br>
-The iterators be updated as follows:
+
+The iterators be updated as follows:<br>
+
 <br><b>a = {15  15  15   15   15   15   15   15   15   15   15   15  17  19 null}</b><br>
 <br><b>b = {2    4   6    7    8   9    10   11   12   13   14   21  21  21}</b><br>
 
-After the a is assigned null the loop is no longer executed and the program returns true. This typical case caused both lists to be traversed in succession. In cases like this the complexity of the algorithm is O(N+M), with N and M being the number of elements on the lists one and two respectively.
+After the a is assigned null the loop is no longer executed and the program returns true. This typical case caused both lists to be traversed in succession. In cases like this the complexity of the algorithm is <b>O(N+M)</b>, with N and M being the number of elements on the lists one and two respectively.
 
