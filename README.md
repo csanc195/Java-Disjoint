@@ -10,7 +10,7 @@ Here follows a brief summary of the method's implementation as well as some expl
 <h4>DISJOINT:</h4>
 This algorithm uses two iterators, a and b to traverse the two lists, a is the iterator for list1 
 and b is the iterator for list 2. The algorithm checks that there are no common elements between list1 and list2. Since both lists are ordered the algorithm first checks if the current element from list1 is greater than the current element on list2, if it is, it then advances the Iterator on the second list, as it is not clear at this point if the element 1 is present on list2; in that case the algorithm continues to traverse list2 by advancing its Iterator to the next element.
-In the other hand if the current element on list1 is smaller than the current element on list2, then the iterator of list1 is advanced since its obvious that element wont be found in list2 since both lists are ordered, as its understood and easy to prove that if: <br>x<y, then x < y+1, x<y+2 etc.<br> 
+In the other hand if the current element on list1 is smaller than the current element on list2, then the iterator of list1 is advanced since its obvious that element wont be found in list2 since both lists are ordered, as its understood and easy to prove that if: <br><b>x &lt;y,then x&lt; y+1, x&lt; y+2 etc.</b><br><br> 
 The last possibility checked is to verify if the current element of list1 is equal to the current 
 element on list2, if they are equal the algorithm then returns false since they are not disjoint as they share at least that element. 
 This procedure continues until either the Iterator to list 1 or the Iterator to list 2 become null (in
