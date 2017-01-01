@@ -15,14 +15,15 @@ The last possibility checked is to verify if the current element of list1 is equ
 element on list2, if they are equal the algorithm then returns false since they are not disjoint as they share at least that element. 
 This procedure continues until either the Iterator to list 1 or the Iterator to list 2 become null (in
 which case the algorithm will return true since the end of one of the lists was fount without finding a common element), or if one common element is found which will return false and conclude.
-This algorithm's running time complexity is linear, O(n+m) as it only has to go trough both lists 
+This algorithm running time complexity is linear, O(n+m) as it only has to go trough both lists 
 simultaneously only once to solve the problem, in the worst case scenario, the algorithm has to go through both lists until the end by traversing through one first, then the other, consider the following scenario:
-List1 = {15, 17, 19}; List2 = {2,4,6,7,8,9,10,11,12,13,14,21}
-
+</p>
+<br>
+<b>List1 = {15,17,19}</b><br>
+<b>List2 = {2,4,6,7,8,9,10,11,12,13,14,21}</b><br>
 The iterators be updated as follows:
-a = {15  15  15   15   15   15   15   15   15   15   15   15  17  19 null}
-b = {2    4   6    7    8   9    10   11   12   13   14   21  21  21}
+<br><b>a = {15  15  15   15   15   15   15   15   15   15   15   15  17  19 null}</b><br>
+<br><b>b = {2    4   6    7    8   9    10   11   12   13   14   21  21  21}</b><br>
 
-After the a is assigned null the loop is no longer executed and the program returns true.
-This typical case caused both lists to be traversed in succession. In cases like this the complexity of the algorithm is O(N+M), with N and M being the number of elements on the lists one and two respectively.
+After the a is assigned null the loop is no longer executed and the program returns true. This typical case caused both lists to be traversed in succession. In cases like this the complexity of the algorithm is O(N+M), with N and M being the number of elements on the lists one and two respectively.
 
